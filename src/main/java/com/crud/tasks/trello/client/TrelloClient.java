@@ -24,8 +24,6 @@ public class TrelloClient {
     private final RestTemplate restTemplate;
     private static final Logger LOGGER = LoggerFactory.getLogger(TrelloClient.class);
 
-
-
     public List<TrelloBoardDto> getTrelloBoards() {
         URI url = UriComponentsBuilder.fromHttpUrl(trelloConfig.getTrelloApiEndpoint() + "/members/" + trelloConfig.getTrelloUsername() + "/boards")
                 .queryParam("key", trelloConfig.getTrelloAppKey())
@@ -49,7 +47,6 @@ public class TrelloClient {
         }
 
     }
-
 
     public CreatedTrelloCardDto createNewCard(TrelloCardDto trelloCardDto){
         URI url = UriComponentsBuilder.fromHttpUrl(trelloConfig.getTrelloApiEndpoint() + "/cards")
