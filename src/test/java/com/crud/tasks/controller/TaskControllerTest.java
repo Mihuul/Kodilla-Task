@@ -116,7 +116,7 @@ class TaskControllerTest {
         String content = gson.toJson(tasksDto);
         //When & Then
         mockMvc.perform(MockMvcRequestBuilders
-                .post("/v1/tasks/create")
+                .post("/v1/tasks")
                 .contentType(MediaType.APPLICATION_JSON)
                 .characterEncoding("UTF-8")
                 .content(content))
