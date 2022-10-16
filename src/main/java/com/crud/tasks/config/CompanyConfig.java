@@ -20,6 +20,6 @@ public class CompanyConfig {
     private String companyEmail;
 
     public String getCompanyDetails() {
-        return companyName + " Contact: " + companyEmail + "Sincerely " + companyOwnerFirstName + " " + companyOwnerLastName;
+        return companyName + " Contact: " + companyEmail + " Sincerely " + companyOwnerFirstName + " " + companyOwnerLastName;
     }
 }
