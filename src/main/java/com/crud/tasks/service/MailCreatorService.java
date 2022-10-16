@@ -31,9 +31,9 @@ public class MailCreatorService {
         context.setVariable("tasks_url", "https://mihuul.github.io/");
         context.setVariable("button", "Visit website");
         context.setVariable("admin_name", adminConfig.getAdminName());
-        context.setVariable("company_name", companyConfig.getCompanyName());
-        context.setVariable("owner_name", companyConfig.getCompanyOwnerFirstName() + " " + companyConfig.getCompanyOwnerLastName());
-        context.setVariable("company_email", companyConfig.getCompanyEmail());
+        context.setVariable("preview_message", message.substring(0,8));
+        context.setVariable("company_details", companyConfig.getCompanyDetails());
         return templateEngine.process("mail/created-trello-card-mail", context);
     }
+
 }

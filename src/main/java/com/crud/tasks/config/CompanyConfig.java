@@ -18,4 +18,8 @@ public class CompanyConfig {
 
     @Value("${info.app.administrator.email}")
     private String companyEmail;
+
+    public String getCompanyDetails() {
+        return companyName + " Contact: " + companyEmail + "Sincerely " + companyOwnerFirstName + " " + companyOwnerLastName;
+    }
 }
