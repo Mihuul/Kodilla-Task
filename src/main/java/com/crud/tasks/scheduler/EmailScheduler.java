@@ -26,8 +26,7 @@ public class EmailScheduler {
         Mail mail = Mail.builder()
                 .mailTo(adminConfig.getAdminMail())
                 .subject(SUBJECT)
-                .message(size != 1 ? "Currently in database you got: " + size + " tasks"
-                    : "Currently in database you got: " + size + " task")
+                .message("Currently in database you got: " + size + ((size != 1) ? " tasks " : " task"))
                 .build();
 
         scheduledEmailService.send(mail);
